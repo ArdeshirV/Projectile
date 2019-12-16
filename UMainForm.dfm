@@ -1,0 +1,176 @@
+object frmMainForm: TfrmMainForm
+  Left = 276
+  Top = 179
+  BorderIcons = [biSystemMenu, biMinimize]
+  BorderStyle = bsSingle
+  Caption = 'Demonstrate Projectile Motion Equations'
+  ClientHeight = 410
+  ClientWidth = 550
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  Icon.Data = {
+    000001000200101010000000000028010000260000002020100000000000E802
+    00004E0100002800000010000000200000000100040000000000800000000000
+    0000000000001000000010000000000000000000800000800000008080008000
+    0000800080008080000080808000C0C0C0000000FF0000FF000000FFFF00FF00
+    0000FF00FF00FFFF0000FFFFFF00000000000000009000000000000000000000
+    0000000000000000000000000900000000000000000000000000000090000000
+    00000000000000000000009000000000000000000000000000009000000000FF
+    F090000000000F111F0000000000F11111F000000000F11111F0000000000F11
+    1F000000000000FFF00000000000FFFD0000FFFF0000FFFF0000FFFB0000FFFF
+    0000FFF70000FFFF0000FFDF0000FFFF0000FF7F0000C5FB000083FD00000000
+    000001FD000083FB0000C7FF0000280000002000000040000000010004000000
+    0000000200000000000000000000100000001000000000000000000080000080
+    00000080800080000000800080008080000080808000C0C0C0000000FF0000FF
+    000000FFFF00FF000000FF00FF00FFFF0000FFFFFF0000000000000000000000
+    0000000090000000000000000000000000000000000000000000000000000000
+    0000000000000000000000000000000000000000000000000000000000000000
+    0000000900000000000000000000000000000000000000000000000000000000
+    0000000000000000000000000000000000000000000000000000000000000000
+    0000090000000000000000000000000000000000000000000000000000000000
+    0000000000000000000000000000000000090000000000000000000000000000
+    0000000000000000000000000000000000000000000000000000000000000000
+    0900000000000000000000000000000000000000000000000000000000000009
+    0000000000000000000000000000000000000000000000000000000000000900
+    0000000000000000000000000000000000000000000000000000000000090000
+    000000000000000000000000000000000000000000000000FFF0000090000000
+    00000000000000FF111FF900000000000000000000000F1111111F0000000000
+    0000000000000F1111111F0000000000000000000000F111111111F000000000
+    000000000000F111111111F0000000000000000000000F1111111F0000000000
+    0000000000000F1111111F000000000000000000000000FF111FF00000000000
+    0000000000000000FFF0000000000000000000000000FFFFFFF7FFFFFFFFFFFF
+    FFFFFFFFFFFFFFFFFFEFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFBFFFFFFFFFFFFF
+    FFFFFFFFFEFFFFFFFFFFFFFFFFFFFFFFFBFFFFFFFFFFFFFFEFFFFFFFFFFFFFFF
+    BFFFFFFFFFFFFFFEFFFFFFFFFFFFF1F7FFFFC03FFFDF803FFFEF803FFFF30000
+    0000001FFFF3803FFFEF803FFFDFC07FFFFFF1FFFFFF}
+  OldCreateOrder = False
+  Position = poScreenCenter
+  OnCreate = FormCreate
+  DesignSize = (
+    550
+    410)
+  PixelsPerInch = 96
+  TextHeight = 13
+  object lblDegree: TLabel
+    Left = 9
+    Top = 351
+    Width = 12
+    Height = 13
+    Anchors = [akLeft, akBottom]
+    Caption = 'a :'
+    ExplicitTop = 525
+  end
+  object lblV: TLabel
+    Left = 8
+    Top = 383
+    Width = 13
+    Height = 13
+    Anchors = [akLeft, akBottom]
+    Caption = 'V :'
+    ExplicitTop = 325
+  end
+  object lblDegreeValue: TLabel
+    Left = 396
+    Top = 350
+    Width = 50
+    Height = 13
+    Anchors = [akRight, akBottom]
+    Caption = '45 Degree'
+    ExplicitLeft = 872
+    ExplicitTop = 524
+  end
+  object lblVValue: TLabel
+    Left = 396
+    Top = 380
+    Width = 36
+    Height = 13
+    Anchors = [akRight, akBottom]
+    Caption = '50(m/s)'
+    ExplicitLeft = 872
+    ExplicitTop = 554
+  end
+  object VChanger: TTrackBar
+    Left = 24
+    Top = 376
+    Width = 370
+    Height = 33
+    Cursor = crHSplit
+    Anchors = [akLeft, akRight, akBottom]
+    Max = 72
+    Min = 1
+    Position = 36
+    TabOrder = 2
+    OnChange = DegreeChangerChange
+  end
+  object DegreeChanger: TTrackBar
+    Left = 24
+    Top = 346
+    Width = 370
+    Height = 26
+    Cursor = crHSplit
+    Anchors = [akLeft, akRight, akBottom]
+    Max = 85
+    Min = 1
+    Position = 42
+    TabOrder = 1
+    OnChange = DegreeChangerChange
+  end
+  object ButtonExit: TButton
+    Left = 465
+    Top = 380
+    Width = 77
+    Height = 22
+    Cursor = crHandPoint
+    Anchors = [akRight, akBottom]
+    Caption = 'E&xit'
+    TabOrder = 4
+    OnClick = ButtonExitClick
+  end
+  object ButtonAbout: TButton
+    Left = 465
+    Top = 352
+    Width = 77
+    Height = 22
+    Cursor = crHandPoint
+    Anchors = [akRight, akBottom]
+    Caption = '&About...'
+    TabOrder = 3
+    OnClick = ButtonAboutClick
+  end
+  object PanelOutput: TPanel
+    Left = 8
+    Top = 8
+    Width = 534
+    Height = 332
+    BevelInner = bvLowered
+    BevelOuter = bvLowered
+    TabOrder = 0
+    object Image: TImage
+      Left = 2
+      Top = 2
+      Width = 530
+      Height = 328
+      Align = alClient
+      DragCursor = crDefault
+      Stretch = True
+      ExplicitLeft = 0
+      ExplicitTop = -23
+      ExplicitWidth = 271
+      ExplicitHeight = 183
+    end
+  end
+  object Timer: TTimer
+    Interval = 20
+    OnTimer = TimerTimer
+    Left = 1056
+    Top = 40
+  end
+  object XPManifest: TXPManifest
+    Left = 56
+    Top = 40
+  end
+end
