@@ -91,7 +91,7 @@
 					</VersionInfo>
 					<VersionInfoKeys>
 						<VersionInfoKeys Name="CompanyName">ArdeshirV</VersionInfoKeys>
-						<VersionInfoKeys Name="FileDescription">https://github.com/ArdeshirV/Projectile</VersionInfoKeys>
+						<VersionInfoKeys Name="FileDescription">https://ardeshirv.github.io/Projectile/</VersionInfoKeys>
 						<VersionInfoKeys Name="FileVersion">1.0.0.0</VersionInfoKeys>
 						<VersionInfoKeys Name="InternalName">Projectile</VersionInfoKeys>
 						<VersionInfoKeys Name="LegalCopyright">Copyright© 2002-2003 ArdeshirV@protonmail.com, Licensed under GPLv3+</VersionInfoKeys>
