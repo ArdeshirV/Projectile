@@ -1,5 +1,5 @@
 // Projectile.dpr - Demonstrate Projectile Motion Equation Entry Point
-// Github: https://github.com/ArdeshirV/Projectile
+// https://ardeshirv.github.io/Projectile/
 // Copyright© 2002-2003 ArdeshirV@protonmail.com, Licensed under GPLv3+
 program Projectile;
 
