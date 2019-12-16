@@ -6,17 +6,19 @@ unit UAbout;
 interface
 
 uses Windows, SysUtils, Classes, Graphics, Forms, Controls, StdCtrls,
-  Buttons, ExtCtrls;
+  Buttons, ExtCtrls, ShellApi;
 
 type
   TAboutBox = class(TForm)
-    Panel1: TPanel;
     Version: TLabel;
     Comments: TLabel;
+    PanelMain: TPanel;
     Copyright: TLabel;
     OKButton: TButton;
+    LabelLink: TLabel;
     ProgramIcon: TImage;
     ProductName: TLabel;
+    procedure LabelLinkClick(Sender: TObject);
   end;
 
 var
@@ -26,5 +28,12 @@ implementation
 
 {$R *.dfm}
 
+procedure TAboutBox.LabelLinkClick(Sender: TObject);
+begin
+  LabelLink.Font.Color := Graphics.clRed;
+  ShellExecute(Handle, 'open', PChar(LabelLink.Caption),
+    nil, nil, SW_SHOWNORMAL);
+end;
+
 end.
- 
+

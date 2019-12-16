@@ -15,7 +15,22 @@ object AboutBox: TAboutBox
   Position = poScreenCenter
   PixelsPerInch = 96
   TextHeight = 13
-  object Panel1: TPanel
+  object LabelLink: TLabel
+    Left = 12
+    Top = 124
+    Width = 177
+    Height = 13
+    Cursor = crHandPoint
+    Caption = 'https://ArdeshirV.github.io/Projectile/'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clBlue
+    Font.Height = -11
+    Font.Name = 'MS Sans Serif'
+    Font.Style = [fsUnderline]
+    ParentFont = False
+    OnClick = LabelLinkClick
+  end
+  object PanelMain: TPanel
     Left = 8
     Top = 8
     Width = 384
